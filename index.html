@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>It's pronounced GIF Not JIF</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">These are a few of my favorite GIF's (Not JIF's)</span>
+    <form class="form-inline my-2 my-lg-0" id="Search">
+            <label for="Input" id="add">Add your own favorites</label>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="Input">
+            <button class="btn btn-outline-info" type="submit" id="addTopic">Search</button>
+          </form>
+        </div>
+</nav>
+
+<div class="container">
+        <div class="row">
+            <div class="btn-group inline pull-left">
+      <button class="btn btn-light" id="topic" data-search="Metal Gear Solid">Metal Gear</button>
+      <button class="btn btn-light" id="topic" data-search="Mass Effect">Mass Effect</button>
+      <button class="btn btn-light" id="topic" data-search="Futurama">Futurama</button>
+      <button class="btn btn-light" id="topic" data-search="Venture Bros">Venture Bros</button>
+      <button class="btn btn-light" id="topic" data-search="James Spader">James Spader</button>
+      <button class="btn btn-light" id="topic" data-search="Vincent Price">Vincent Price</button>
+
+      <div id="gifButton"></div>
+    </div>
+  </div>
+</div>
+    
+
+<div class="container">
+    <div class="row">
+      <span><div id="dropdown"></div></span>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="assets/javascript/javascript.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</body>
+</html>
