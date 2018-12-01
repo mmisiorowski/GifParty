@@ -1,16 +1,16 @@
 $(document).ready(function() {
-  
+  //array where we place the objects
   var topics = [];
 
      function displayGIFS() {
   
     var x = $(this).data("search");
     console.log(x);
-  
+  //API reference and API key//
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + x + "&api_key=dc6zaTOxFJmzC&limit=10";
   
     console.log(queryURL);
-  
+  //Ajax call segment//
     $.ajax({
             url: queryURL,
             method: "GET"
@@ -20,7 +20,7 @@ $(document).ready(function() {
             for (var i = 0; i < results.length; i++) {
             
             var topicDiv = $("<div class='col-md-4'>");
-  
+  //displays age rating / image information//
             var rating = results[i].rating;
             var animated = results[i].images.fixed_height.url;
             var still = results[i].images.fixed_height_still.url;
@@ -40,7 +40,8 @@ $(document).ready(function() {
     });
   }
   
-    
+    //search button copies user input from the form , copies it into our array and adds a new button//
+    //at least that was the intent, I couldn't quite get it to function//
     $("#addTopic").on("click", function(event) {
           event.preventDefault();
           var newSearch = $("#Input").val().trim();
@@ -50,7 +51,7 @@ $(document).ready(function() {
           displayButtons();
         });
   
-    
+    //works with my bootstrap html buttons to pull that data//
     function displayButtons() {
       $("#gifButton").empty();
       for (var i = 0; i < topics.length; i++) {
@@ -64,13 +65,13 @@ $(document).ready(function() {
 
     displayButtons();
   
-    
+    //on click functions for pausing / playing the displayed gifs//
     $(document).on("click", "#topic", displayGIFS);
   
     
     $(document).on("click", ".Giphy", pausePlayGifs);
   
-    
+    //if then script that sets the gif to "play" or "still" based on the click functions above//
     function pausePlayGifs() {
        var state = $(this).attr("data-state");
         if (state === "still") {
