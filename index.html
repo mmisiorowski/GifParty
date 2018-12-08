@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Gettin Giphy With It</title>
- 
- <!-- Bootstrap and JQuery Links-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Giphy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="style.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <h1>Gettin Giffy with it</h1>
+  <body>
+    <div id="buttons-view"></div>
+
+
+<!-- Popupheader title on page load, this will appear on load and give
+a brief description of the pages function-->
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  Welcome to my Giphy gallery, Click a button!
+</div>
+
+
+    <br />
+<!--- The code that holds all of my keywords in the form of buttons, 
+these will link up with the Ajax call and presnt gifs on the screen that relate to the keyword terms embedded
+in the buttons-->
+    <button data-person="Emperor Palpatine">Unlimited Power</button>
+    <button data-person="Mario">It's a Me!</button>
+    <button data-person="Sex Pistols">Anarchy in the UK</button>
+    <button data-person="Obi Wan">Hello there!</button>
+    <button data-person="The Lich King">All Shall kneel</button>
+    <button data-person="Austin Powers">I too like to live dangerously</button>
+<!-- Div that holds our GIF display-->
+    <div id="gifs-appear-here"></div>
+  </body>
+<!-- Links up to our JS page which holds our functions-->
   <script src="javascript.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
- <!-- Bootstrap and JQuery Links-->
-</head>
-<body>
-  
-</body>
 </html>
+
+<!-- This assignment was crafted using elements and code from activity 6,10,13 & 15 of week 3 -->
